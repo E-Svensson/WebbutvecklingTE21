@@ -2,5 +2,33 @@ body{
     background-color: rgb(191, 253, 233);
     color: rgb(44, 71, 66);
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1{
+    font-family: Arial;
+    font-size: 22px;
+}
+p:nth-child(2){
+    border: 1px solid;
+    border-color: black;
+    border-radius: 10px;
+}
+p:nth-child(3){
+    border: 1px solid;
+    border-color: black;
+    border-radius: 10px;
+}
+h2{
+    background-color: rgb(233, 250, 252);
+    color: black;
+}
+p:nth-child(5){
+    background-color: rgb(233, 250, 252);
+    color: black;
+}
+p:nth-child(6){
+    text-align: right;
+}
+
+a{
+    text-decoration: none;
 }
