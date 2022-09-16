@@ -9,6 +9,7 @@ body{
     "header header"
     "nav nav"
     "footer footer";
+    
 }
 
 header{
@@ -20,7 +21,26 @@ header ul{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "h1 h2";
+    "li li";
+}
+
+header ul li{
+    font-family: Arial;
+    font-size: 40px;
+    list-style-type: none;
+    font-weight: bold;
+    
+    border-color: rgb(172, 201, 255);
+    border-style: inset;
+    border-width: 5px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-left-width: 15px;
+    border-right-width: 15px;
+
+    padding: 10px;
+
+    background-color: rgb(147, 154, 255);
 }
 
 nav{
@@ -32,17 +52,18 @@ nav ul{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 100px;
     grid-template-areas: 
-    "main aside"
-    "main aside";
+    "li li"
+    "li li";
+    font-size: 20px;
+}
+
+nav ul li{
+    list-style-type: none;
 }
 
 footer{
     grid-area: footer;
-}
-
-h1, h2{
-    font-family: Arial;
-    font-size: 30px;
+    font-size: 15px;
 }
 
 a{
