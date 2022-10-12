@@ -8,39 +8,75 @@ body{
     "nav"
     "footer";
 
-    background-color: antiquewhite;
+    background-color: rgb(221, 221, 255);
 
     text-align: center;
 }
 
 header{
-    grid-area: "header";
-    border-style: solid;
-    border-top-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    border-width: 5px;
+    grid-area: header;
+
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    border-width: 3px;
+    border-color: rgb(25, 25, 61);
+    background-color: rgb(143, 143, 229);
+}
+
+header h1{
+    font-size: 3em;
+    margin: 5px;
 }
 
 main{
-    grid-area: "main";
+    grid-area: main;
     font-size: 1.5em;
 }
 
+p{
+    margin: 5px;
+}
+
 nav{
-    grid-area: "nav";
+    grid-area: nav;
+    
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    border-width: 3px;
+    border-color: rgb(25, 25, 61);
+    background-color: rgb(143, 143, 229);
+}
+
+nav > ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "section section";
+
+    padding: 0;
+    margin: 0;
 }
 
 footer{
-    grid-area: "footer";
+    grid-area: footer;
     font-size: 1em
-    border
-}
-
-header > h1{
-    font-size: 3em;
 }
 
 li{
     list-style-type: none;
+
+    padding: 5px;
+}
+
+li:hover{
+    background-color: rgb(129, 129, 212);
+}
+
+a{
     text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: Arial;
 }
