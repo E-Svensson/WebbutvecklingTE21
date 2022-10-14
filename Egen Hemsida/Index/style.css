@@ -1,4 +1,9 @@
 body{
+    background-color: rgb(221, 221, 255);
+    text-align: center;
+}
+
+.wrapper{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
@@ -7,10 +12,28 @@ body{
     "main"
     "nav"
     "footer";
+}
 
-    background-color: rgb(221, 221, 255);
+#sida1 > .wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "header"
+    "main"
+    "nav"
+    "footer";
+}
 
-    text-align: center;
+#sida2 > .wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "header"
+    "main"
+    "nav"
+    "footer";
 }
 
 header{
@@ -49,10 +72,10 @@ nav{
 
 nav > ul{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto auto;
     grid-template-rows: auto;
     grid-template-areas:
-    "section section";
+    "section";
 
     padding: 0;
     margin: 0;
@@ -65,8 +88,6 @@ footer{
 
 li{
     list-style-type: none;
-
-    padding: 5px;
 }
 
 li:hover{
@@ -74,9 +95,16 @@ li:hover{
 }
 
 a{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+   
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: Arial;
 }
