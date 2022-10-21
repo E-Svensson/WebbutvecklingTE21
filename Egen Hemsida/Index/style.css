@@ -2,8 +2,10 @@ body{
 
     text-align: center;
 
+    margin-top: 1em;
     margin-left: 3em;
     margin-right: 3em;
+    margin-bottom: auto;
 
     background-color: rgb(129, 129, 212)
 }
@@ -20,7 +22,6 @@ div header{
     border-top-right-radius: 2em;
     border-top-left-radius: 2em;
     border-color:rgb(58, 58, 138);
-
 }
 
 div header h1{
@@ -34,18 +35,47 @@ div main{
     border-top-style: solid;
     border-right-style: solid;
     border-left-style: solid;
-    border-color: rgb(58, 58, 138);
+    border-bottom-style: dotted;
 
-    font-size: 1.5em;
+    border-color: rgb(58, 58, 138);
 }
 
-/*div footer{
-    border-style: solid;
+main h2{
+    margin: 0%;
+    padding: 0.5em;
+
+    font-size: 2em;
+}
+
+main p{
+    margin: 0%;
+    padding-top: 0%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+
+    font-size: 1.2em;
+}
+
+div footer{
+    grid-area: footer;
+    
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-top-style: hidden;
+
     border-bottom-right-radius: 2em;
     border-bottom-left-radius: 2em;
     border-color:rgb(58, 58, 138);
+}
 
-}*/
+footer > p{
+    margin: 0%;
+    padding: 0.5em;
+
+    font-size: 1em;
+}
 
 #index > .wrapper{
     display: grid;
@@ -82,9 +112,15 @@ div main{
 
 #index main{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 100%;
     grid-template-areas: "section";
+}
+
+#index img{
+    border-radius: 2em;
+    width: 90%;
+    padding: 5%;
 }
 
 #sida2 main{
@@ -94,12 +130,11 @@ div main{
     grid-template-areas: "section";
 }
 
-#sida2 h2{
-    margin: 5px;
-}
-
-p{
-    margin: 5px;
+#sida3 main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "section";
 }
 
 nav{
@@ -115,7 +150,7 @@ nav{
 
 nav > ul{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 421px 421px 421px;
     grid-template-rows: auto;
     grid-template-areas:
     "section";
@@ -158,9 +193,4 @@ a{
     font-weight: bold;
     font-size: 1.5em;
     font-family: Arial;
-}
-
-footer{
-    grid-area: footer;
-    font-size: 1em
 }
