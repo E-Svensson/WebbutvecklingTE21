@@ -1,35 +1,53 @@
-body{
+body{ /*Kanterna*/
 
-    text-align: center;
-
+    /*Skapar kanterna runt huvudkroppen*/
     margin-top: 1em;
     margin-left: 3em;
     margin-right: 3em;
-    margin-bottom: auto;
+    margin-bottom: 1em;
 
+    /*Sätter bakgrundsfärgen på kanterna*/
     background-color: rgb(129, 129, 212)
 }
 
-div{
+div{ /*Kroppen av hemsidan*/
+
+    /*Centrerar allt som default*/
+    text-align: center;
+
+    /*Sätter defaukt-bakgrundsfärgen på kroppen*/
     background-color: rgb(215, 215, 245);
+
+    /*Rundar hörnen på kroppen så bakgrunden rundas*/
     border-radius: 2em;
 }
 
-div header{
+div header{ /*Huvudet på hemsidan*/
+
+    /*Ger den rätt area i griden*/
     grid-area: header;
 
+    /*Skapar en border runt huvudet*/
     border-style: solid;
+
+    /*Rundar de övre hörnen på bordern*/
     border-top-right-radius: 2em;
     border-top-left-radius: 2em;
+
+    /*Sätter färgen på bordern*/
     border-color:rgb(58, 58, 138);
 }
 
-div header h1{
+div header h1{ /*Rubrken i huvudet*/
+
+    /*Sätter stroleken på fonten*/
     font-size: 3em;
-    margin: 5px;
+
+    /*Sätter färgen på bordern*/
+    margin: 0.2em;
 }
 
-div main{
+div main{ /*Magen av hemsidan*/
     grid-area: main;
 
     border-top-style: solid;
@@ -37,17 +55,18 @@ div main{
     border-left-style: solid;
     border-bottom-style: dotted;
 
+    /*Sätter färgen på bordern*/
     border-color: rgb(58, 58, 138);
 }
 
-main h2{
+main h2{ /**/
     margin: 0%;
     padding: 0.5em;
 
     font-size: 2em;
 }
 
-main p{
+main p{ /**/
     margin: 0%;
     padding-top: 0%;
     padding-left: 0.5em;
@@ -99,11 +118,20 @@ footer > p{
     "footer";
 }
 
+main li{
+    text-align: left;
+    font-size: 1.2em;
+}
+
+table{
+    margin: 1em;
+}
+
 table, th, td{
     border-style: solid;
-    
-    margin-left: 1em;
-    margin-right: 1em;
+
+    width: 95%;
+
     border-radius: 0.3em;
     border-color:rgb(58, 58, 138);
     background-color:rgb(129, 129, 212);
@@ -116,8 +144,11 @@ th, td{
 }
 
 td img{
-    width: 10em;
-    height: auto;
+    height: 10em;
+}
+
+td:nth-child(1){
+    font-weight: bold;
 }
 
 tr:nth-child(2n) > td, th{
@@ -151,17 +182,17 @@ tr:nth-child(2n) > td, th{
 #sida2 main{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
-    "section section"
     "section section";
 }
 
 #sida3 main{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "section";
+    grid-template-areas: 
+    "section section";
 }
 
 nav{
@@ -207,7 +238,7 @@ nav li:hover{
     background-color: rgb(129, 129, 212);
 }
 
-a{
+nav a{
     display: inline-block;
     position: relative;
     z-index: 1;
