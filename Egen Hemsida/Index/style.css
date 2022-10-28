@@ -1,4 +1,4 @@
-body{ /*Kanterna*/
+body{ /*Kanterna (+ kroppen)*/
 
     /*Skapar kanterna runt huvudkroppen*/
     margin-top: 1em;
@@ -7,7 +7,10 @@ body{ /*Kanterna*/
     margin-bottom: 1em;
 
     /*Sätter bakgrundsfärgen på kanterna*/
-    background-color: rgb(129, 129, 212)
+    background-color: rgb(129, 129, 212);
+
+    /*Sätter storlekeb på bordern över hela hemsidan*/
+    border-width: 3px;
 }
 
 div{ /*Kroppen av hemsidan*/
@@ -48,55 +51,81 @@ div header h1{ /*Rubrken i huvudet*/
 }
 
 div main{ /*Magen av hemsidan*/
+
+    /*Ger den rätt area i griden*/
     grid-area: main;
 
+    /*Gör den övre, vänstra och högra bordern synlig*/
     border-top-style: solid;
     border-right-style: solid;
     border-left-style: solid;
+
+    /*Gör bordern mellan foten och magen punkterad*/
     border-bottom-style: dotted;
 
     /*Sätter färgen på bordern*/
     border-color: rgb(58, 58, 138);
 }
 
-main h2{ /**/
+main h2{ /*Rubrikerna på magen*/
+
+    /*Tar bort all margin och sätter en padding*/
     margin: 0%;
     padding: 0.5em;
 
+    /*Ändrar storleken på texten*/
     font-size: 2em;
 }
 
-main p{ /**/
+main p{ /*Styckerna på magen*/
+
+    /*Tar bort all margin och padding på toppen*/
     margin: 0%;
     padding-top: 0%;
+
+    /*Sätter en padding under, till vänster och till höger om texten*/
     padding-left: 0.5em;
     padding-right: 0.5em;
     padding-bottom: 0.5em;
 
+    /*Ändrar storleken på texten*/
     font-size: 1.2em;
 }
 
-div footer{
+div footer{ /*Foten av hemsidan*/
+
+    /*Ger den rätt area i griden*/
     grid-area: footer;
     
+    /*Gär bordern synlig undertill, till vänster och till höger*/
     border-bottom-style: solid;
     border-left-style: solid;
     border-right-style: solid;
+
+    /*Gömmer den övre bordern*/
     border-top-style: hidden;
 
+    /*Rundar av de nedre hörnen*/
     border-bottom-right-radius: 2em;
     border-bottom-left-radius: 2em;
+
+    /*Sätter färgen på bordern*/
     border-color:rgb(58, 58, 138);
 }
 
-footer > p{
+footer > p{ /*Styckerna i foten*/
+
+    /*Tar bort margin och sätter en padding*/
     margin: 0%;
     padding: 0.5em;
 
+    /*Sätter storleken på texten*/
     font-size: 1em;
 }
 
-#index > .wrapper{
+#index{ /*Skapar en id-selektor för index (sida 1)*/
+
+    /*Sätter huhvgriden (som är lika på alla sidor)*/
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
@@ -107,7 +136,9 @@ footer > p{
     "footer";
 }
 
-#sida2 > .wrapper{
+#sida2{ /*Skapar en id-selektor för sida 2*/
+
+    /*Sätter huhvgriden (som är lika på alla sidor)*/
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
@@ -118,68 +149,101 @@ footer > p{
     "footer";
 }
 
-main li{
+#sida3{ /*Skapar en id-selektor för sida 3*/
+
+    /*Sätter huhvgriden (som är lika på alla sidor)*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+#sida3 main li{ /*Listan på magen i sida 3*/
+
+    /*Flyttar texten till vänster (eftersom den är som default centrerad)*/
     text-align: left;
+
+    /*Ändrar storleke på texten*/
     font-size: 1.2em;
 }
 
-table{
+table{ /*Tabellen*/
+
+    /*Sätter en margin i försök på att centrera tabellen*/
     margin: 1em;
 }
 
-table, th, td{
+table, th, td{ /*Gruppselektor för tabellen och alla element i tabellen*/
+
+    /*Gör bordern synlig*/
     border-style: solid;
 
+    /*Minskar på bredden så att den tillsammans med marginen centrerar tabellen*/
     width: 95%;
 
+    /*Rundar av hörnen på tabellen*/
     border-radius: 0.3em;
+
+    /*Sätter färg på bordern*/
     border-color:rgb(58, 58, 138);
+
+    /*Sätter bakgrundsfärgen på tabellen*/
     background-color:rgb(129, 129, 212);
 }
 
-th, td{
-    padding: 1em;
-    background-color:rgb(215, 215, 245);
+th, td{ /*Gruppselektor för tabellens rutor*/
 
+    /*Sätten en padding*/
+    padding: 1em;
+
+    /*Sätter bakgrundsfärgen i rutorna*/
+    background-color:rgb(215, 215, 245);
 }
 
-td img{
+td img{ /*Bilderna inuti tabellen*/
+
+    /*Sätter höjden på bilderna*/
     height: 10em;
 }
 
-td:nth-child(1){
+td:nth-child(1){ /*Första kolumnen i tabellen*/
+
+    /*Gör texten fetstilt*/
     font-weight: bold;
 }
 
-tr:nth-child(2n) > td, th{
+tr:nth-child(2n) > td, th{ /*Varannan rad i tabellen*/
+
+    /*Ändrar backgrundsfärg --> ger "zebra striping"*/
     background-color:rgb(143, 143, 229);
 }
 
-#sida3 > .wrapper{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-    "header"
-    "nav"
-    "main"
-    "footer";
-}
+#index main{ /*Magen på index (sida 1)*/
 
-#index main{
+    /*Sätter en grid och bestämmer hur den ska se ut*/
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 10% 0px;
     grid-template-areas: "section";
 }
 
-#index img{
+#index img{ /*Bilden på magen i sida 1*/
+
+    /*Rundar av hörnen*/
     border-radius: 2em;
+
+    /*Sätter bredden och paddingen för att ge andningsplats åt bakgrundsfärgen*/
     width: 98%;
     padding: 1%;
 }
 
-#sida2 main{
+#sida2 main{ /*Magen på sida 2*/
+
+    /*Sätter en grid och bestämmer hur den ska se ut*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -187,7 +251,9 @@ tr:nth-child(2n) > td, th{
     "section section";
 }
 
-#sida3 main{
+#sida3 main{ /*Magen på sida 3*/
+
+    /*Sätten en grid och bestämmer hur den ska se ut*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -195,60 +261,87 @@ tr:nth-child(2n) > td, th{
     "section section";
 }
 
-nav{
+nav{ /*Halsen på hemsidan*/
+
+    /*Ger den rätt area i griden*/
     grid-area: nav;
     
+    /*Gör den vänstra och högra bordern punkterad*/
     border-left-style: dotted;
     border-right-style: dotted;
 
-    border-width: 3px;
+    /*Sätter färgen på bordern*/
     border-color: rgb(58, 58, 138);
+
+    /*Sätter färgen på bakgrunden av halsen*/
     background-color: rgb(143, 143, 229);
 }
 
-nav > ul{
+nav > ul{ /*Listan i halsen*/
+
+    /*Sätter en grid och bestämmer hur den ska se ut*/
     display: grid;
     grid-template-columns: 33% 34% 33%;
     grid-template-rows: auto;
     grid-template-areas:
     "section";
 
+    /*Sätter margin och padding till 0*/
     padding: 0;
     margin: 0;
-}
 
-#index nav li:nth-child(1){
-    background-color: rgb(129, 129, 212);
-}
-
-#sida2 nav li:nth-child(2){
-    background-color: rgb(129, 129, 212);
-}
-
-#sida3 nav li:nth-child(3){
-    background-color: rgb(129, 129, 212);
-}
-
-
-nav li{
+    /*Tar bort list-punkterna*/
     list-style-type: none;
 }
 
-nav li:hover{
+#index nav li:nth-child(1){ /*Listelemet 1 på sida 1 (används för att mörka den sidan man är inne på)*/
+
+    /*Sätter bakgrundsfärgen lite mörkare än halsens bakgrundsfärg*/
     background-color: rgb(129, 129, 212);
 }
 
-nav a{
+#sida2 nav li:nth-child(2){ /*Listelemet 2 på sida 2 (används för att mörka den sidan man är inne på)*/
+
+    /*Sätter bakgrundsfärgen lite mörkare än halsens bakgrundsfärg*/
+    background-color: rgb(129, 129, 212);
+}
+
+#sida3 nav li:nth-child(3){ /*Listelemet 3 på sida 3 (används för att mörka den sidan man är inne på)*/
+
+    /*Sätter bakgrundsfärgen lite mörkare än halsens bakgrundsfärg*/
+    background-color: rgb(129, 129, 212);
+}
+
+nav li:hover{ /*Listan man har muspekaren över*/
+
+    /*Mörkar bakgrundsfärgen*/
+    background-color: rgb(129, 129, 212);
+}
+
+nav a{ /*Länkarna i halsen*/
+
+    /*Ska vara ärlig, dessa kommer från google och jag vet knappt vad de gör*/
     display: inline-block;
     position: relative;
     z-index: 1;
+
+    /*Sätter bredden och paddingen på övre och nedre delen*/
     width: 100%;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
    
+    /*Tar bort understrykningarna*/
     text-decoration: none;
+
+    /*Sätter färgen till svart*/
     color: black;
+
+    /*Gör texten fetstilt*/
     font-weight: bold;
+
+    /*Sätter storleken på texten*/
     font-size: 1.5em;
+
+    /*Sätter typsnittet*/
     font-family: Arial;
 }
